@@ -376,7 +376,7 @@ main {
       '<button class="star' + (bm ? ' on' : '') + '" id="star" aria-label="북마크">' + (bm ? '★' : '☆') + '</button></div>';
     var kindTxt = it.k === 'i' ? '족보 원문' : (it.o && it.o.length >= 3 ? '객관식' : (it.o && it.o.length ? '객관식(' + it.o.length + '지선다)' : '주관식(단답)'));
     h += '<div class="sub">' + (it.yr ? esc(it.yr) + '학번' : '') +
-      (it.lb ? ' · ' + esc(it.lb) : '') + ' · ' + kindTxt + ' · ' + (state.pos + 1) + '/' + total + '</div>';
+      (it.lb ? (it.yr ? ' · ' : '') + esc(it.lb) : '') + ' · ' + kindTxt + ' · ' + (state.pos + 1) + '/' + total + '</div>';
 
     if (it.k === 'i') {
       h += figHtml(it.q);
